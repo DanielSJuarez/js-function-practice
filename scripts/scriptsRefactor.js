@@ -27,15 +27,17 @@
   // to a variable containing an anonymous
   // function
   
-  function doSomethingCool() {
+//   function doSomethingCool() {
+//     console.log("Something Cool!");
+//   }
+  
+  // Put your answer below -------------------------
+  let doSomethingCool = function() {
     console.log("Something Cool!");
   }
   
-  // Put your answer below -------------------------
-  
-  
   // -----------------------------------------------
-  
+
   //////////////////////////////////////////////////
   //////////////////////////////////////////////////
   
@@ -45,15 +47,19 @@
   // after 2 seconds. Refactor to use an anonymous
   // function
   
-  function sayHi() {
-    alert("Hello, World!");
-  }
+//   function sayHi() {
+//     alert("Hello, World!");
+//   }
   
-  setTimeout(sayHi, 2000);
+//   setTimeout(sayHi, 2000);
   
   // Put your answer below -------------------------
   
+  let sayHi = function(){
+    alert("Hello, World!");
+  }
   
+  setTimeout(sayHi(2000));
   // -----------------------------------------------
   
   //////////////////////////////////////////////////
@@ -82,7 +88,8 @@
   console.log("The letter is", letter);
   
   // Put your answer below -------------------------
-  
+
+  //Option [b] as the var letter with 'x' is not being called. Then being replaced with setTimeout function to 'y', then being console.logged once the function finshes. Then var letter is being replaced outside the function with 'z'. So the new value is permantely replaced before the final console.log
   
   // -----------------------------------------------
   
@@ -95,17 +102,17 @@
   // of the function is 5 lines of code. Refactor
   // this function to do the same thing with 1 line
   
-  var reverseStr = function(str) {
-    var arr;
-    arr = str.split("");
-    arr = arr.reverse();
-    str = arr.join("");
-    return str;
-  };
+//   var reverseStr = function(str) {
+//     var arr;
+//     arr = str.split("");
+//     arr = arr.reverse();
+//     str = arr.join("");
+//     return str;
+//   };
   
   // Put your answer below -------------------------
-  
-  
+  var reverseStr = (str) => str.split('').reverse().join('');
+
   
   // -----------------------------------------------
   
@@ -154,10 +161,11 @@
   // Break it up so that the declaration and
   // assignment are happening on 2 seperate lines.
   
-  var foo = "bar";
+//   var foo = "bar";
   
   // Put your answer below -------------------------
-  
+  var foo;
+  foo = 'bar';
   
   // -----------------------------------------------
   
@@ -173,15 +181,20 @@
   // to specify a number of times to call the given
   // function.
   
-  var callTenTimes = function(callback) {
-    var range = Array.from(Array(10).keys());
+//   var callTenTimes = function(callback) {
+//     var range = Array.from(Array(10).keys());
+//     range.forEach(callback);
+//   };
+  
+//   callTenTime(functionName);
+  
+  // Put your answer below -------------------------
+  var callTenTimes = function(callback, runTimes) {
+    var range = Array.from(Array(runTimes).keys());
     range.forEach(callback);
   };
   
-  // callTenTime(functionName);
-  
-  // Put your answer below -------------------------
-  
+  callTenTime(callback, runTimes);
   
   // -----------------------------------------------
   
@@ -198,17 +211,30 @@
   
   // HINT: "global scope"
   
-  var score = 0;
+//   var score = 0;
   
-  var increaseScore = function() {
-    score++;
-  };
+//   var increaseScore = function() {
+//     score++;
+//   };
   
-  var decreaseScore = function() {
-    score--;
-  };
+//   var decreaseScore = function() {
+//     score--;
+//   };
   
   // Put your answer below -------------------------
+  let game = function(){
+      let score = 0;
+      let increaseScore = function() {
+        score = 0;
+        score++;
+      };
+      
+      let decreaseScore = function() {
+        score = 0;
+        score--;
+      };
+  }
+  
   
   
   
@@ -230,7 +256,7 @@
   var twoPlusTwo = addNumbers(2,2);
   
   // Put your answer below -------------------------
-  
+ 
   
   
   // -----------------------------------------------
@@ -250,14 +276,21 @@
   // Then refactor the function to have a default
   // amount of 1 if no param is given.
   
-  var speed = 0;
+//   var speed = 0;
   
-  var accelerate = function(amount) {
-    speed += amount;
-  };
+//   var accelerate = function(amount) {
+//     speed += amount;
+//   };
   
   // Put your answer below -------------------------
+
+  //This comes back as Nan as you are trying to add 0 (a number) and amount (Nan) together. This results in a faley and will return NaN.
+
+  var speed = 0;
   
+  var accelerate = function(amount = 1) {
+    speed += amount;
+  };
   
   
   // -----------------------------------------------
@@ -296,27 +329,29 @@
   //       ...
   //     });
   
-  var callLater = function(timeout, callback) {
-    setTimeout(callback, timeout);
-  };
+//   var callLater = function(timeout, callback) {
+//     setTimeout(callback, timeout);
+//   };
   
   // Put your answer below -------------------------
-  
+  var callLater = function(callback, timeout = 1000) {
+    setTimeout(callback, timeout);
+  };
   
   // -----------------------------------------------
   
   //////////////////////////////////////////////////
   })();
-  © 2022 GitHub, Inc.
-  Terms
-  Privacy
-  Security
-  Status
-  Docs
-  Contact GitHub
-  Pricing
-  API
-  Training
-  Blog
-  About
+//   © 2022 GitHub, Inc.
+//   Terms
+//   Privacy
+//   Security
+//   Status
+//   Docs
+//   Contact GitHub
+//   Pricing
+//   API
+//   Training
+//   Blog
+//   About
   
