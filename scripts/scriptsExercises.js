@@ -46,7 +46,9 @@
         }
     }
 
-
+    // function maxofThree(num1, num2, num3){
+    //return Math.max(num1, num2, num3);
+    //}
     // ---------------------
     // Define a function isVowel() that takes a character (i.e. a string of length 1) and returns true if it is a vowel, false otherwise.
     // ---------------------
@@ -64,7 +66,9 @@
             return false;
         }
     }
-
+    // function isVowel(char) {
+       // return 'aeiou'.includes(char);
+    //}
     // ---------------------
     // Write a function rovarspraket() that will translate a text into "rövarspråket". That is, double every consonant and place an occurrence of "o" in between. For example, translate("this is fun") should return the string "tothohisos isos fofunon".
     // ---------------------
@@ -88,6 +92,16 @@
     } 
 
 
+    //function rovarspraket(text) {
+        //const textArr = text.toLowerCase().split('');
+        //for(let i = 0; i < textArr.length; i++){
+            //look for what is included not excluded as that will be more rebust to protect again special characters and whitespace
+           // if ('bcdfghjklmnpqrstvwxyx'.includes(text[i])) {
+               //textArr[i] = textArr[i] + 'o' + textArr[i];
+            //}
+        //}
+        //return textArr.join('');
+    //}
     // ---------------------
     // Define a function sum() and a function multiply() that sums and multiplies (respectively) all the numbers in an array of numbers. For example, sum([1,2,3,4]) should return 10, and multiply([1,2,3,4]) should return 24.
     // ---------------------
@@ -109,7 +123,7 @@
 
     function multiply(arr) {
         let num = arr[0];
-        for (let i = 0; i < arr.length; i++) {
+        for (let i = 1; i < arr.length; i++) {
             num *= arr[i];
         }
         return num;
