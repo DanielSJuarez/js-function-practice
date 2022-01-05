@@ -270,7 +270,8 @@
   
   // Put your answer below -------------------------
   let addNumbers = function(numberA, numberB) {
-    console.log(numberA + numberB);
+    let sum = numberA + numberB;
+    return sum;
   };
   
   let twoPlusTwo = addNumbers(2,2);
