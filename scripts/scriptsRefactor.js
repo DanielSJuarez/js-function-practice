@@ -89,7 +89,7 @@
   
   // Put your answer below -------------------------
 
-  //Option [b] as the var letter with 'x' is not being called. Then being replaced with setTimeout function to 'y', then being console.logged once the function finshes. Then var letter is being replaced outside the function with 'z'. So the new value is permantely replaced before the final console.log
+  //Option [c] as the var letter with 'x' is not being called. Then being replaced with setTimeout function to 'y', then being console.logged once the function finshes. However, this finishes after the var letter is being replaced outside the function with 'z' due to the setTimout method being call. Thus 'z' then 'y' is logged.
   
   // -----------------------------------------------
   
@@ -127,27 +127,40 @@
   // Refactor this function to use an object
   // instead of an if/else statement.
   
-  var spanishColor = function(colorName) {
-    if (colorName.toLowerCase() === "rojo") {
-      return "#ff0000";
-    }
-    else if (colorName.toLowerCase() === "blanco") {
-      return "#ffffff";
-    }
-    else if (colorName.toLowerCase() === "azul") {
-      return "#0000ff";
-    }
-    else if (colorName.toLowerCase() === "verde") {
-      return "#00ff00";
-    }
-    else if (colorName.toLowerCase() === "negro") {
-      return "#000000";
-    }
-  };
+//   var spanishColor = function(colorName) {
+//     if (colorName.toLowerCase() === "rojo") {
+//       return "#ff0000";
+//     }
+//     else if (colorName.toLowerCase() === "blanco") {
+//       return "#ffffff";
+//     }
+//     else if (colorName.toLowerCase() === "azul") {
+//       return "#0000ff";
+//     }
+//     else if (colorName.toLowerCase() === "verde") {
+//       return "#00ff00";
+//     }
+//     else if (colorName.toLowerCase() === "negro") {
+//       return "#000000";
+//     }
+//   };
   
   // Put your answer below -------------------------
-  
-  
+  var spanishColor = function(colorName) {
+    let colors = {
+        'rolo': '#ff0000',
+        'blanco': '#ffffff',
+        'azul': '#0000ff',
+        'verde': '#00ff00',
+        'negro': '#000000'
+    }
+    for (let prop in colors)
+        if(colorName.toLowerCase() === prop){
+            return colors[prop];
+        }
+  };
+
+
   
   // -----------------------------------------------
   
@@ -189,12 +202,12 @@
 //   callTenTime(functionName);
   
   // Put your answer below -------------------------
-  var callTenTimes = function(callback, runTimes) {
+  var callRunTimes = function(callback, runTimes) {
     var range = Array.from(Array(runTimes).keys());
     range.forEach(callback);
   };
   
-  callTenTime(callback, runTimes);
+ 
   
   // -----------------------------------------------
   
@@ -249,14 +262,19 @@
   // twoPlusTwo gets set to `undefined`. Refactor
   // the function to make it work.
   
-  var addNumbers = function(numberA, numberB) {
+//   var addNumbers = function(numberA, numberB) {
+//     console.log(numberA + numberB);
+//   };
+  
+//   var twoPlusTwo = addNumbers(2,2);
+  
+  // Put your answer below -------------------------
+  let addNumbers = function(numberA, numberB) {
     console.log(numberA + numberB);
   };
   
-  var twoPlusTwo = addNumbers(2,2);
+  let twoPlusTwo = addNumbers(2,2);
   
-  // Put your answer below -------------------------
- 
   
   
   // -----------------------------------------------
@@ -334,9 +352,11 @@
 //   };
   
   // Put your answer below -------------------------
-  var callLater = function(callback, timeout = 1000) {
-    setTimeout(callback, timeout);
+  var callLater = function(timeout = 1000, callback,) {
+    setTimeout(timeout, callback);
   };
+
+  
   
   // -----------------------------------------------
   
