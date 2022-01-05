@@ -120,7 +120,7 @@
         return num;
     }
 
-
+//const sum = arr => arr.reduct((acc,i) => acc + i);
     function multiply(arr) {
         let num = arr[0];
         for (let i = 1; i < arr.length; i++) {
@@ -147,17 +147,24 @@
         }
         return newString;
     }
+    // unction reverse(str) {
+        //let newString = '';
+        //for (let i = 0; i < str.length; i++) {
+    //         newString = str[i] + newString;
+    //     }
+    //     return newString;
+    // }
 
-
+    // const reverse = string => string.split('').reverse().join('');
     // ---------------------
     // Define a function findLongestWord() that takes an array of words and returns the length of the longest one.
     // ---------------------
 
     //Finds the longest word in an array
 
-    /*Takes array of words and returns the longest word*/
+    /*Takes array of words and returns the longest word length*/
     /*Array of words to find the longest word*/
-    /*Longest word in the array*/
+    /*Length of the longest word in the array*/
 
     function findLongestWord(arr) {
         let longestWord = '';
@@ -192,7 +199,7 @@
         return newArr;
     }
 
-
+    // const filterLongWord = (arr, i) => arr.filter(word => word.length > i);
     // ---------------------
     // Define a function charFreq() that takes a string and builds a frequency listing of the characters contained in it. Represent the frequency listing as a Javascript object. Try it with something like charFreq("abbabcbdbabdbdbabababcbcbab").
     // ---------------------
@@ -213,7 +220,7 @@
     //     return frequency;
     // }
     function charFreq(str) {
-        var freq = {};
+        let freq = {};
         for (let i = 0; i < str.length; i++) {
             let character = str.charAt(i);
             if (freq[character]) {
